@@ -1,2 +1,2 @@
-notes.docx,300
+test.txt,100
 report_final.pdf,275

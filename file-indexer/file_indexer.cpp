@@ -107,10 +107,10 @@ namespace files {
             	return root;
         	}
         	else if(name < root->fileName) {
-            	root->left = searchNode(root->left, name);
+            	return searchNode(root->left, name);
         	}
         	else if(name > root->fileName) {
-            	root->right = searchNode(root->right, name);
+            	return searchNode(root->right, name);
         	}
         	
         	return root;
@@ -196,7 +196,7 @@ int main() {
     indexer.createFile("notes.docx", 300);
 
     indexer.editFile("report.pdf", "report_final.pdf", 275);
-    indexer.deleteFile("test.txt");
+    indexer.deleteFile("notes.docx");
 
     bool found = indexer.searchFileName("notes.docx");
     if(found) {
